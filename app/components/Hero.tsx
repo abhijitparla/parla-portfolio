@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Typewriter from "typewriter-effect";
-import profilePic from "../../assets/parla1.jpg";
+import profilePic from "../../assets/parla.png";
 import Image from "next/image";
 
 const Hero = () => {
