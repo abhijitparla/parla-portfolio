@@ -1,10 +1,10 @@
-"use client";
 import React from "react";
-import Typewriter from "typewriter-effect";
 import profilePic from "../../assets/parla1.jpg";
 import Image from "next/image";
+import TypewriterEffect from "./TypewriterEffect";
 
 const Hero = () => {
+  const val = process.env.MONGO_URI
   return (
     <div>
       <section className="bg-white dark:bg-gray-900">
@@ -18,21 +18,7 @@ const Hero = () => {
           </div>
           <div className="mr-auto place-self-center sm:col-span-7 lg:col-span-7 xl:col-span-7">
             <h1 className=" text-blue-500 max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-              <Typewriter
-                options={{
-                  strings: [
-                    "Hello",
-                    "Namaste",
-                    "Hola",
-                    "Bonjour",
-                    "Hallo",
-                    "Nǐ hǎo",
-                    "Olá",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
+              <TypewriterEffect/>              
             </h1>
             <h1 className="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-3xl xl:text-4xl dark:text-white">
               I am a Full Stack Engineer building beautiful, usable and
@@ -42,6 +28,7 @@ const Hero = () => {
               I work at the intersection of technology, design and business. I
               beleive all great products are built in this zone.
             </p>
+            <p>ENV val: {val}</p>
           </div>
         </div>
       </section>
